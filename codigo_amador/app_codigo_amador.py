@@ -13,6 +13,8 @@ app = Flask(__name__)
 CORS(app)
 
 
+# ||| INICIO DA PARTE DO BANCO DE DADOS |||
+
 # Nome do arquivo do banco
 BANCO = "tarefas.db"
 
@@ -91,6 +93,10 @@ def inicializar_banco():
     conexao.commit()
     conexao.close()
 
+
+# ||| FIM DA PARTE DO BANCO DE DADOS |||
+
+# ||| INICIO DA PARTE DAS ROTAS |||
 
 @app.get("/")
 def inicio():
